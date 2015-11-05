@@ -1,0 +1,3 @@
+class SmirksController < ApplicationController
+
+end
