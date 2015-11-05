@@ -1,0 +1,3 @@
+class SmashesController < ApplicationController
+
+end
