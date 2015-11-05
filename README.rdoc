@@ -1,0 +1,40 @@
+== README
+
+User Stories:
+-As a User I want to be able to create a smash account so I can use the app
+-As a User I want to be able to log in and log out as a unique user on the app (sessions)
+-A logged in user should be able to create smashes and smirks
+-An existing user should not be able to edit or delete existing smashes and smirks by the user, there are no take backs
+-A user should be able to see all smashes on the index page by order of highest smirks
+-When viewing a User profile, I should be able to see all the smashes and smirks made by the user
+-A smash should have a wasted/smashed smiley next to it while smirks should have smug smilies.
+-As a User I should be able to click and view a smash individually on its own page along with the smirks to that smash
+-As a User I should be able to like or dislike a smash so that jibberish gets moved to the bottom of the index page
+
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.
