@@ -1,0 +1,8 @@
+<h1>GET SMASHED!</h1>
+<%= form_for @user do |f| %>
+  SName:  <%= f.text_field :sname %>
+  Email: <%= f.text_field :email %>
+  Password: <%= f.password_field :password %>
+  Confirm Password: <%= f.password_field :password_confirmation %>
+<%= f.submit "Join SMASHED!" %>
+<% end %>
