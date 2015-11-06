@@ -5,10 +5,15 @@ class SmirksController < ApplicationController
   end
 
   def create
-    @smirk = Smirk.new
+    @smirk = Smirk.new(smirk_params)
+    @smirk.smash_id = params[:smash_id]
     @smirk.user_id = current_user.id
-    if @smirk.save
-      render :new
+    @smirk.save
+      redirect_to smash_path(@smirk.smash)
+  end
+
+  def smirk_params
+    params.require(:smirk).permit(:user_id, :content)
   end
 
 end

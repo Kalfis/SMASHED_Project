@@ -2,8 +2,7 @@
 
 <%= form_for [ @smash, @smirk ] do |f| %>
 <p>
-  <%= f.text_area :content %>
-
+  <%= f.text_area :content, size: '50x7' %>
 </p>
 <p>
   <%= f.submit 'Smirk It' %>
