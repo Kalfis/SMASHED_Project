@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151106154123) do
+ActiveRecord::Schema.define(version: 20151106202644) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,17 @@ ActiveRecord::Schema.define(version: 20151106154123) do
   end
 
   add_index "smashes", ["user_id"], name: "index_smashes_on_user_id", using: :btree
+
+  create_table "smirks", force: :cascade do |t|
+    t.string   "content"
+    t.integer  "user_id"
+    t.integer  "smash_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "smirks", ["smash_id"], name: "index_smirks_on_smash_id", using: :btree
+  add_index "smirks", ["user_id"], name: "index_smirks_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "sname"

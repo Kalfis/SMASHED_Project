@@ -3,7 +3,7 @@
 <ul>
   <% @smashes.each do |smash| %>
   <li>
-    <%= smash.content %> <br />
+    <%= smash.content %> <%= link_to 'Gawk', smash_path(smash) %><br />
     by: <%= smash.user.sname %>
   </li>
   <% end %>

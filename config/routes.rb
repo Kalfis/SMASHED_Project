@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :users, :smashes
+  resources :users
+  resources :smashes do
+    resources :smirks
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 get '/' => 'smashes#index'

@@ -8,7 +8,7 @@
 </head>
 <body>
   <% if current_user %>
-     Logged in as <%= current_user.sname %> | <%= link_to "SMASHED", "/" %> | <%= link_to "SMASHit", "/smashes/new" %> | <%= link_to "SMASHout", "/logout" %>
+     Logged in as <%= current_user.sname %> | <%= link_to "SMASHED", "/" %> | <%= link_to "SMASHit", "/smashes/new" %> | <%= link_to "SMASHEDout", "/logout" %>
      <% else %>
      <%= link_to "SMASHin", "/login" %> | <%= link_to "GET SMASHED", "/users/new" %>
      <% end %>

@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+  before_action :authorize, except: [:index, :new, :create]
+
   def index
 
   end
@@ -20,9 +23,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-
-
   private
+  
     def user_params
       params.require(:user).permit(
       :sname,
@@ -31,5 +33,5 @@ class UsersController < ApplicationController
       :password_confirmation
       )
     end
-    
+
 end

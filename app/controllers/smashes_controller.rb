@@ -5,6 +5,8 @@ class SmashesController < ApplicationController
 
   def show
     @smash = Smash.find(params[:id])
+    @smirk = Smirk.new
+    @smirk.smash_id = @smash.id
   end
 
   def new

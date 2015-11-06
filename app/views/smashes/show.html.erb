@@ -1,0 +1,9 @@
+<p>
+  <%= @smash.content %>
+</p>
+
+ <%= render partial: 'smirks/form' %>
+
+<h3>Smirks</h3>
+<%= render partial: 'smashes/smirk', collection: @smash.smirks %>
+<%= link_to 'SMASHED', '/' %>
