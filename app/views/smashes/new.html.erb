@@ -1,0 +1,7 @@
+<h1> You don't want to do this man </h1>
+
+<%= form_for @smash, url: "/smashes" do |f| %>
+
+  <%= f.text_field :content %>
+  <%= f.submit "Don't!" %>
+<% end %>

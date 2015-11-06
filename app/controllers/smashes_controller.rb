@@ -7,13 +7,13 @@ class SmashesController < ApplicationController
     @smash = Smash.find(params[:id])
   end
 
-  def
+  def new
     @smash = Smash.new
   end
 
   def create
     @smash = Smash.new(smash_params)
-    @smash.user_id = current_user.sname
+    @smash.user_id = current_user.id
     if @smash.save
       redirect_to("/smashes")
     else
@@ -24,10 +24,10 @@ class SmashesController < ApplicationController
   private
   def smash_params
     params.require(:smash).permit(
-    :content
-    :image
+    :content,
+    :image,
     :user
     )
   end
-  
+
 end
