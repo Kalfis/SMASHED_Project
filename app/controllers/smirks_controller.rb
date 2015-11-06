@@ -13,7 +13,7 @@ class SmirksController < ApplicationController
   end
 
   def smirk_params
-    params.require(:smirk).permit(:user_id, :content)
+    params.require(:smirk).permit(:user, :content)
   end
 
 end
