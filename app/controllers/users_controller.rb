@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   before_action :authorize, except: [:index, :new, :create]
-  
+
   def index
 
   end

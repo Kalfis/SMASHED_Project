@@ -24,13 +24,13 @@ class SmashesController < ApplicationController
     end
   end
 
-  def Lulz
+  def upvote
     @smash = Smash.find(params[:id])
     @smash.liked_by current_user
     redirect_to @smash
   end
 
-  def Boo
+  def downvote
     @smash = Smash.find(params[:id])
     @smash.downvote_from current_user
     redirect_to @smash
