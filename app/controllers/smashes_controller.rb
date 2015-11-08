@@ -1,4 +1,5 @@
 class SmashesController < ApplicationController
+
   def index
     @smashes = Smash.all
   end
@@ -21,6 +22,18 @@ class SmashesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def Lulz
+    @smash = Smash.find(params[:id])
+    @smash.liked_by current_user
+    redirect_to @smash
+  end
+
+  def Boo
+    @smash = Smash.find(params[:id])
+    @smash.downvote_from current_user
+    redirect_to @smash
   end
 
   private

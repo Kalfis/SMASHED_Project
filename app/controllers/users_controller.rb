@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   before_action :authorize, except: [:index, :new, :create]
-
+  
   def index
 
   end
@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   end
 
   private
-  
+
     def user_params
       params.require(:user).permit(
       :sname,
