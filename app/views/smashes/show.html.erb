@@ -1,10 +1,12 @@
 <p>
   <%= @smash.content %>
 </p>
-<%= link_to 'Lulz', like_smash_path(@smash), method: :put %>
-<%= link_to 'Boo', dislike_smash_path(@smash), method: :put %>
+<%= link_to 'Lulz', like_smash_path(@smash), method: :put %> |
+<%= link_to 'Boo..', dislike_smash_path(@smash), method: :put %>
  <%= render partial: 'smirks/form' %>
 
 <h3>Smirks</h3>
+
 <%= render partial: 'smashes/smirk', collection: @smash.smirks %>
+
 <%= link_to 'SMASHED', '/' %>
