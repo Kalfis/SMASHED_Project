@@ -13,10 +13,31 @@
  *= require_tree .
  *= require_self
  */
+.header img {
+  width: 50px;
+  height: 50px;
+
+}
+
+.header h1 {
+  position: relative;
+  color: navy;
+  font-size: 55px;
+  top: 18px;
+  left: 10px;
+}
+
+.header h2 {
+  font-size: 17px;
+  color: navy;
+  text-shadow: -1px -1px 1px #000, 1px 1px 1px #ccc;
+}
 body {
+  text-align: center;
   background-color: teal;
-  font-family: 'helvetica'
+  font-family: helvetica;
 }
 ul.Slist {
   list-style-image: url(http://forum.yugiohtheabridgedseries.com/images/smilies/AwesomeFaceSmugSmall.png);
+  list-style-position: inside;
 }

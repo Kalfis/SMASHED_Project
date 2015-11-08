@@ -1,6 +1,11 @@
-<h1> SMASHED </h1>
-<h2> You're probably making a mistake, but at least you're making it here</h2>
-<ul class="Slist">
+<div class='header'>
+  <h1> <img src='http://image.spreadshirtmedia.com/image-server/v1/designs/10285032,width=178,height=178,version=1320836481/Wasted-Smiley-3.png' alt='logo' /> SMASHED </h1>
+  <h2> You're probably making a mistake, but at least you're making it here</h2>
+</div>
+
+
+
+<ul class='Slist'>
   <% @smashes.each do |smash| %>
   <li>
     <%= smash.content %> <%= link_to 'Gawk', smash_path(smash) %><br />
