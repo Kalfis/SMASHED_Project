@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="google-site-verification" content="5MX5rvSII20cLatpbT5sYJmdlggKuOQwZu6hQYlCOSg" />
   <title>SmashedApp</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -10,7 +11,7 @@
   <% if current_user %>
      Logged in as <%= current_user.sname %> | <%= link_to "SMASHED", "/" %> | <%= link_to "SMASHit", "/smashes/new" %> | <%= link_to "SMASHEDout", "/logout" %>
      <% else %>
-     <%= link_to "SMASHin", "/login" %> | <%= link_to "GET SMASHED", "/users/new" %>
+     <%= link_to "SMASHin", "/login" %> | <%= link_to "GET SMASHED", "/users/new" %> | <%= link_to "SMASHED", "/" %>
      <% end %>
 <%= yield %>
 

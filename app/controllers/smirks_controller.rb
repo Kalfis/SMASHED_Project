@@ -12,6 +12,15 @@ class SmirksController < ApplicationController
       redirect_to smash_path(@smirk.smash)
   end
 
+  def update
+    @smirk = Smirk.find(params[:id])
+    if @smirk.update(smirk_params)
+      redirect_to @smash
+    else
+      render 'edit'
+    end
+  end
+
   def smirk_params
     params.require(:smirk).permit(:user, :content)
   end

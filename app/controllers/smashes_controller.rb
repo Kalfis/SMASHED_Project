@@ -1,13 +1,14 @@
 class SmashesController < ApplicationController
 
   def index
-    @smashes = Smash.all
+    @smashes = Smash.all.order(created_at: :desc)
   end
 
   def show
     @smash = Smash.find(params[:id])
     @smirk = Smirk.new
     @smirk.smash_id = @smash.id
+
   end
 
   def new
